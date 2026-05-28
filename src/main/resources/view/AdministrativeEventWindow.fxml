@@ -113,7 +113,6 @@
     <HBox prefHeight="2" minHeight="2" maxHeight="2"
           style="-fx-background-color: #e8ede8;"/>
 
-    <!-- ── TABLA con scroll ── -->
     <VBox VBox.vgrow="ALWAYS" maxHeight="1.7976931348623157E308"
           fillWidth="true" spacing="6"
           style="-fx-background-color: #f4f6f4;">
@@ -149,7 +148,6 @@
         </ScrollPane>
     </VBox>
 
-    <!-- ── BOTONES fijos abajo ── -->
     <HBox prefHeight="62" minHeight="62" maxHeight="62"
           alignment="CENTER_RIGHT" spacing="12"
           style="-fx-background-color: white;

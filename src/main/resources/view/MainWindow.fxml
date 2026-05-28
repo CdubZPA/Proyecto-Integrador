@@ -6,7 +6,6 @@
 <?import javafx.scene.image.Image?>
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.*?>
-<?import javafx.scene.text.Font?>
 
 <HBox xmlns="http://javafx.com/javafx/21"
       xmlns:fx="http://javafx.com/fxml/1"
@@ -101,7 +100,6 @@
         <HBox spacing="12" style="-fx-background-color: #f0f2f0;">
             <padding><Insets top="18" right="20" bottom="10" left="20"/></padding>
 
-            <!-- Tarjeta 1 -->
             <VBox fx:id="card1" HBox.hgrow="ALWAYS" spacing="4"
                   style="-fx-background-color: white; -fx-background-radius: 10;
                          -fx-effect: dropshadow(gaussian,rgba(0,0,0,0.07),8,0,0,2);">
@@ -120,7 +118,6 @@
                               -fx-font-family: 'Georgia';"/>
             </VBox>
 
-            <!-- Tarjeta 2 -->
             <VBox fx:id="card2" HBox.hgrow="ALWAYS" spacing="4"
                   style="-fx-background-color: white; -fx-background-radius: 10;
                          -fx-effect: dropshadow(gaussian,rgba(0,0,0,0.07),8,0,0,2);">
