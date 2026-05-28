@@ -99,7 +99,8 @@ src/main/resources/
 - Jakarta Persistence API
 
 ## Capturas de pantalla
-Puedes agregar aquí imágenes del dashboard y de cada módulo para mejorar la presentación del repositorio.
+<img width="1600" height="827" alt="image" src="https://github.com/user-attachments/assets/f26be400-75d8-4f20-bcff-c0d9888eb31c" />
+
 
 ## Autor
 Proyecto desarrollado por *Camilo Sierra*.
