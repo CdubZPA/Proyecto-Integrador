@@ -99,14 +99,18 @@ src/main/resources/
 - Jakarta Persistence API
 
 ## Capturas de pantalla
-Panel General
+##Panel General
+
 <img width="1600" height="827" alt="image" src="https://github.com/user-attachments/assets/f26be400-75d8-4f20-bcff-c0d9888eb31c" />
-Servidores Publicos
+##Servidores Publicos
+
 <img width="1600" height="822" alt="image" src="https://github.com/user-attachments/assets/3aea3f9b-53b4-4ff9-a721-ae423260b271" />
 <img width="1600" height="830" alt="image" src="https://github.com/user-attachments/assets/1e87269f-ec0a-485e-a6b4-9a99100124e6" />
-Gestion de Cargos
+##Gestion de Cargos
+
 <img width="1600" height="824" alt="image" src="https://github.com/user-attachments/assets/a91873c0-ff55-4fe3-bae4-7410ae8e2d5f" />
-Novedades Administrativas
+##Novedades Administrativas
+
 <img width="1600" height="827" alt="image" src="https://github.com/user-attachments/assets/c1d958a5-7a40-44ff-891c-5569b852fd2c" />
 <img width="1600" height="825" alt="image" src="https://github.com/user-attachments/assets/a4ba8ba2-b7b3-401c-ba35-63aa61ab010f" />
 
