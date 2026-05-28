@@ -13,13 +13,9 @@
       prefHeight="660.0" prefWidth="980.0"
       style="-fx-background-color: #f0f2f0;">
 
-    <!-- ═══════════════════════════════════
-         PANEL IZQUIERDO - Navegación fija
-    ═══════════════════════════════════ -->
     <VBox prefWidth="220.0" minWidth="220.0"
           style="-fx-background-color: #1a5c28;">
 
-        <!-- Logo -->
         <VBox alignment="CENTER"
               style="-fx-background-color: #0f3d1a;"
               prefHeight="130.0">
@@ -35,7 +31,6 @@
                           -fx-font-family: 'Georgia';"/>
         </VBox>
 
-        <!-- Botones de navegación -->
         <VBox spacing="4" VBox.vgrow="ALWAYS">
             <padding><Insets top="18" bottom="18" left="10" right="10"/></padding>
 
@@ -80,7 +75,6 @@
                            -fx-alignment: CENTER_LEFT; -fx-padding: 0 0 0 14;"/>
         </VBox>
 
-        <!-- Footer nav -->
         <VBox alignment="CENTER" prefHeight="44.0"
               style="-fx-background-color: #0f3d1a;">
             <Label text="Gobernación de Boyacá"
@@ -89,13 +83,9 @@
         </VBox>
     </VBox>
 
-    <!-- ═══════════════════════════════════
-         PANEL DERECHO - Contenido dinámico
-    ═══════════════════════════════════ -->
     <VBox HBox.hgrow="ALWAYS" spacing="0"
           style="-fx-background-color: #f0f2f0;">
 
-        <!-- Barra superior con título del módulo -->
         <HBox alignment="CENTER_LEFT"
               style="-fx-background-color: white;
                      -fx-border-color: #e0e8e0;
@@ -108,7 +98,6 @@
                           -fx-text-fill: #1a5c28; -fx-font-family: 'Georgia';"/>
         </HBox>
 
-        <!-- 4 Tarjetas de estadísticas -->
         <HBox spacing="12" style="-fx-background-color: #f0f2f0;">
             <padding><Insets top="18" right="20" bottom="10" left="20"/></padding>
 
@@ -150,7 +139,6 @@
                               -fx-font-family: 'Georgia';"/>
             </VBox>
 
-            <!-- Tarjeta 3 -->
             <VBox fx:id="card3" HBox.hgrow="ALWAYS" spacing="4"
                   style="-fx-background-color: white; -fx-background-radius: 10;
                          -fx-effect: dropshadow(gaussian,rgba(0,0,0,0.07),8,0,0,2);">
@@ -169,7 +157,6 @@
                               -fx-font-family: 'Georgia';"/>
             </VBox>
 
-            <!-- Tarjeta 4 -->
             <VBox fx:id="card4" HBox.hgrow="ALWAYS" spacing="4"
                   style="-fx-background-color: white; -fx-background-radius: 10;
                          -fx-effect: dropshadow(gaussian,rgba(0,0,0,0.07),8,0,0,2);">
@@ -189,19 +176,15 @@
             </VBox>
         </HBox>
 
-        <!-- Separador -->
         <Separator style="-fx-background-color: #d8e8d8;">
             <HBox.margin><Insets left="20" right="20"/></HBox.margin>
         </Separator>
 
-        <!-- Área de contenido dinámico -->
         <StackPane fx:id="contentArea" VBox.vgrow="ALWAYS">
             <padding><Insets top="10" right="20" bottom="16" left="20"/></padding>
 
-            <!-- Panel Home con logo de fondo -->
             <StackPane fx:id="homePanel">
 
-                <!-- Logo semitransparente de fondo -->
                 <ImageView fitWidth="500" fitHeight="300"
                            preserveRatio="true"
                            opacity="0.07"
@@ -211,7 +194,6 @@
                     </image>
                 </ImageView>
 
-                <!-- Texto encima del logo -->
                 <VBox alignment="CENTER" spacing="10">
                     <Label text="¡Bienvenido al Sistema de Gestión!"
                            style="-fx-font-size: 20px; -fx-font-weight: bold;

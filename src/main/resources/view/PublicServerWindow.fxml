@@ -3,7 +3,6 @@
 <?import javafx.geometry.Insets?>
 <?import javafx.scene.control.*?>
 <?import javafx.scene.layout.*?>
-<?import javafx.scene.text.Font?>
 
 <VBox xmlns="http://javafx.com/javafx/21"
       xmlns:fx="http://javafx.com/fxml/1"
@@ -16,7 +15,6 @@
       spacing="0"
       style="-fx-background-color: #f4f6f4;">
 
-   <!-- ── HEADER delgado ── -->
    <HBox prefHeight="54" minHeight="54" maxHeight="54"
          alignment="CENTER_LEFT" spacing="12"
          style="-fx-background-color: #1a5c28;">
@@ -52,7 +50,6 @@
    <HBox prefHeight="3" minHeight="3" maxHeight="3"
          style="-fx-background-color: #b01010;"/>
 
-   <!-- ── FORMULARIO ── -->
    <VBox prefHeight="185" minHeight="185" maxHeight="185"
          style="-fx-background-color: white;">
       <padding>
@@ -139,7 +136,6 @@
    <HBox prefHeight="2" minHeight="2" maxHeight="2"
          style="-fx-background-color: #e8ede8;"/>
 
-   <!-- ── TABLA con scroll ── -->
    <VBox VBox.vgrow="ALWAYS" maxHeight="1.7976931348623157E308"
          fillWidth="true" spacing="6"
          style="-fx-background-color: #f4f6f4;">
@@ -174,7 +170,6 @@
       </ScrollPane>
    </VBox>
 
-   <!-- ── BOTONES fijos abajo ── -->
    <HBox prefHeight="62" minHeight="62" maxHeight="62"
          alignment="CENTER_RIGHT" spacing="12"
          style="-fx-background-color: white;

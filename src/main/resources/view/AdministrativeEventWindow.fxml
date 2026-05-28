@@ -15,7 +15,7 @@
       spacing="0"
       style="-fx-background-color: #f4f6f4;">
 
-    <!-- ── HEADER delgado con Buscar + Actualizar horizontal ── -->
+
     <HBox prefHeight="54" minHeight="54" maxHeight="54"
           alignment="CENTER_LEFT"
           spacing="12"
@@ -49,11 +49,11 @@
                        -fx-cursor: hand;"/>
     </HBox>
 
-    <!-- Línea roja decorativa -->
+
     <HBox prefHeight="3" minHeight="3" maxHeight="3"
           style="-fx-background-color: #b01010;"/>
 
-    <!-- ── FORMULARIO ── -->
+
     <VBox prefHeight="185" minHeight="185" maxHeight="185"
           style="-fx-background-color: white;">
         <padding>
