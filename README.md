@@ -48,10 +48,6 @@ El proyecto está configurado para trabajar con la base de datos:
 ```sql
 talento_humano
 ```
-Credenciales por defecto configuradas en el proyecto:
-- Usuario: root
-- Contraseña: (vacía)
-
 La configuración se encuentra en:
 - `src/main/resources/META-INF/persistence.xml`
 - `src/main/java/controller/MainController.java`
