@@ -1,0 +1,174 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<VBox xmlns="http://javafx.com/javafx/21"
+      xmlns:fx="http://javafx.com/fxml/1"
+      fx:controller="controller.AdministrativeEventController"
+      prefWidth="940"
+      prefHeight="720"
+      maxWidth="1.7976931348623157E308"
+      maxHeight="1.7976931348623157E308"
+      fillWidth="true"
+      spacing="0"
+      style="-fx-background-color: #f4f6f4;">
+
+    <!-- ── HEADER delgado con Buscar + Actualizar horizontal ── -->
+    <HBox prefHeight="54" minHeight="54" maxHeight="54"
+          alignment="CENTER_LEFT"
+          spacing="12"
+          style="-fx-background-color: #1a5c28;">
+        <padding>
+            <Insets top="0" right="20" bottom="0" left="24"/>
+        </padding>
+
+        <Label text="NOVEDADES ADMINISTRATIVAS"
+               style="-fx-text-fill: white; -fx-font-size: 15px;
+                      -fx-font-weight: bold;"
+               HBox.hgrow="ALWAYS"/>
+
+        <TextField fx:id="txtSearchIdNumber"
+                   promptText="Buscar cédula"
+                   prefWidth="160" prefHeight="30"
+                   style="-fx-background-radius: 5; -fx-border-radius: 5;"/>
+
+        <Button text="🔍 Buscar"
+                onAction="#searchByIdNumber"
+                prefWidth="100" prefHeight="30"
+                style="-fx-background-color: white; -fx-text-fill: #1a5c28;
+                       -fx-font-weight: bold; -fx-background-radius: 5;
+                       -fx-cursor: hand;"/>
+
+        <Button text="↻ Actualizar"
+                onAction="#reloadData"
+                prefWidth="110" prefHeight="30"
+                style="-fx-background-color: #b01010; -fx-text-fill: white;
+                       -fx-font-weight: bold; -fx-background-radius: 5;
+                       -fx-cursor: hand;"/>
+    </HBox>
+
+    <!-- Línea roja decorativa -->
+    <HBox prefHeight="3" minHeight="3" maxHeight="3"
+          style="-fx-background-color: #b01010;"/>
+
+    <!-- ── FORMULARIO ── -->
+    <VBox prefHeight="185" minHeight="185" maxHeight="185"
+          style="-fx-background-color: white;">
+        <padding>
+            <Insets top="14" right="30" bottom="14" left="30"/>
+        </padding>
+
+        <Label text="Datos de la Novedad"
+               style="-fx-text-fill: #1a5c28; -fx-font-size: 15px;
+                      -fx-font-weight: bold;"/>
+
+        <GridPane hgap="20" vgap="8" style="-fx-padding: 8 0 0 0;">
+            <columnConstraints>
+                <ColumnConstraints prefWidth="140"/>
+                <ColumnConstraints prefWidth="210" hgrow="ALWAYS"/>
+                <ColumnConstraints prefWidth="140"/>
+                <ColumnConstraints prefWidth="210" hgrow="ALWAYS"/>
+            </columnConstraints>
+            <rowConstraints>
+                <RowConstraints minHeight="32"/>
+                <RowConstraints minHeight="32"/>
+                <RowConstraints minHeight="60"/>
+            </rowConstraints>
+
+            <Label text="Cédula"
+                   GridPane.columnIndex="0" GridPane.rowIndex="0"/>
+            <TextField fx:id="txtIdNumber" promptText="Número de cédula"
+                       GridPane.columnIndex="1" GridPane.rowIndex="0"/>
+
+            <Label text="Nombre Completo"
+                   GridPane.columnIndex="2" GridPane.rowIndex="0"/>
+            <TextField fx:id="txtFullName" promptText="Nombre completo"
+                       GridPane.columnIndex="3" GridPane.rowIndex="0"/>
+
+            <Label text="Tipo de Novedad"
+                   GridPane.columnIndex="0" GridPane.rowIndex="1"/>
+            <ComboBox fx:id="cbEventType" maxWidth="1.7976931348623157E308"
+                      GridPane.columnIndex="1" GridPane.rowIndex="1"/>
+
+            <Label text="Fecha Inicio"
+                   GridPane.columnIndex="2" GridPane.rowIndex="1"/>
+            <DatePicker fx:id="dpStartDate" maxWidth="1.7976931348623157E308"
+                        GridPane.columnIndex="3" GridPane.rowIndex="1"/>
+
+            <Label text="Fecha Fin"
+                   GridPane.columnIndex="0" GridPane.rowIndex="2"/>
+            <DatePicker fx:id="dpEndDate" maxWidth="1.7976931348623157E308"
+                        GridPane.columnIndex="1" GridPane.rowIndex="2"/>
+
+            <Label text="Descripción"
+                   GridPane.columnIndex="2" GridPane.rowIndex="2"/>
+            <TextArea fx:id="taDescription" promptText="Opcional..."
+                      prefRowCount="2" wrapText="true"
+                      GridPane.columnIndex="3" GridPane.rowIndex="2"/>
+        </GridPane>
+    </VBox>
+
+    <HBox prefHeight="2" minHeight="2" maxHeight="2"
+          style="-fx-background-color: #e8ede8;"/>
+
+    <!-- ── TABLA con scroll ── -->
+    <VBox VBox.vgrow="ALWAYS" maxHeight="1.7976931348623157E308"
+          fillWidth="true" spacing="6"
+          style="-fx-background-color: #f4f6f4;">
+        <padding>
+            <Insets top="10" right="20" bottom="8" left="20"/>
+        </padding>
+
+        <Label text="Registros"
+               style="-fx-text-fill: #1a5c28; -fx-font-size: 12px;
+                      -fx-font-weight: bold;"/>
+
+        <ScrollPane fitToWidth="true" fitToHeight="true"
+                    VBox.vgrow="ALWAYS"
+                    style="-fx-background-color: transparent;
+                           -fx-background: transparent;
+                           -fx-border-color: transparent;">
+
+            <TableView fx:id="table"
+                       minHeight="200"
+                       prefHeight="9999"
+                       maxWidth="1.7976931348623157E308"
+                       style="-fx-background-color: white;
+                              -fx-border-color: #d0ddd0;">
+                <columns>
+                    <TableColumn fx:id="colId"        prefWidth="60"  text="ID"/>
+                    <TableColumn fx:id="colIdNumber"  prefWidth="120" text="Cédula"/>
+                    <TableColumn fx:id="colFullName"  prefWidth="220" text="Nombre"/>
+                    <TableColumn fx:id="colEventType" prefWidth="180" text="Tipo Novedad"/>
+                    <TableColumn fx:id="colStartDate" prefWidth="140" text="Fecha Inicio"/>
+                    <TableColumn fx:id="colEndDate"   prefWidth="140" text="Fecha Fin"/>
+                </columns>
+            </TableView>
+        </ScrollPane>
+    </VBox>
+
+    <!-- ── BOTONES fijos abajo ── -->
+    <HBox prefHeight="62" minHeight="62" maxHeight="62"
+          alignment="CENTER_RIGHT" spacing="12"
+          style="-fx-background-color: white;
+                 -fx-border-color: #d0ddd0 transparent transparent transparent;">
+        <padding>
+            <Insets top="11" right="24" bottom="11" left="24"/>
+        </padding>
+
+        <Button text="Guardar" onAction="#save"
+                prefWidth="140" prefHeight="40"
+                style="-fx-background-color: #1a5c28; -fx-text-fill: white;
+                       -fx-font-size: 13px; -fx-background-radius: 5;
+                       -fx-cursor: hand;"/>
+
+        <Button text="Eliminar" onAction="#delete"
+                prefWidth="140" prefHeight="40"
+                style="-fx-background-color: #b01010; -fx-text-fill: white;
+                       -fx-font-size: 13px; -fx-background-radius: 5;
+                       -fx-cursor: hand;"/>
+    </HBox>
+
+</VBox>

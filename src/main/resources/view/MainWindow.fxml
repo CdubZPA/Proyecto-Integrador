@@ -1,0 +1,233 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.Font?>
+
+<HBox xmlns="http://javafx.com/javafx/21"
+      xmlns:fx="http://javafx.com/fxml/1"
+      prefHeight="660.0" prefWidth="980.0"
+      style="-fx-background-color: #f0f2f0;">
+
+    <!-- ═══════════════════════════════════
+         PANEL IZQUIERDO - Navegación fija
+    ═══════════════════════════════════ -->
+    <VBox prefWidth="220.0" minWidth="220.0"
+          style="-fx-background-color: #1a5c28;">
+
+        <!-- Logo -->
+        <VBox alignment="CENTER"
+              style="-fx-background-color: #0f3d1a;"
+              prefHeight="130.0">
+            <padding><Insets top="20" bottom="20" left="15" right="15"/></padding>
+            <Label text="GESTIÓN DE"
+                   style="-fx-text-fill: white; -fx-font-size: 17px;
+                          -fx-font-family: 'Georgia';"/>
+            <Label text="TALENTO HUMANO"
+                   style="-fx-text-fill: white; -fx-font-size: 15px;
+                          -fx-font-weight: bold; -fx-font-family: 'Georgia';"/>
+            <Label text="Gobernación de Boyacá"
+                   style="-fx-text-fill: #a8d5b0; -fx-font-size: 9px;
+                          -fx-font-family: 'Georgia';"/>
+        </VBox>
+
+        <!-- Botones de navegación -->
+        <VBox spacing="4" VBox.vgrow="ALWAYS">
+            <padding><Insets top="18" bottom="18" left="10" right="10"/></padding>
+
+            <Label text="MÓDULOS"
+                   style="-fx-text-fill: #a8d5b0; -fx-font-size: 9px;
+                          -fx-font-family: 'Georgia'; -fx-padding: 0 0 6 10;"/>
+
+            <Button fx:id="btnHome"
+                    prefHeight="46.0" maxWidth="Infinity"
+                    text="🏠   Inicio"
+                    onAction="#onHome"
+                    style="-fx-background-color: #2d7a3a; -fx-text-fill: white;
+                           -fx-font-size: 13px; -fx-background-radius: 6;
+                           -fx-cursor: hand; -fx-font-family: 'Georgia';
+                           -fx-alignment: CENTER_LEFT; -fx-padding: 0 0 0 14;"/>
+
+            <Button fx:id="btnServers"
+                    prefHeight="46.0" maxWidth="Infinity"
+                    text="👤   Servidores Públicos"
+                    onAction="#onServers"
+                    style="-fx-background-color: transparent; -fx-text-fill: #c8e6c9;
+                           -fx-font-size: 13px; -fx-background-radius: 6;
+                           -fx-cursor: hand; -fx-font-family: 'Georgia';
+                           -fx-alignment: CENTER_LEFT; -fx-padding: 0 0 0 14;"/>
+
+            <Button fx:id="btnPositions"
+                    prefHeight="46.0" maxWidth="Infinity"
+                    text="📋   Gestión de Cargos"
+                    onAction="#onPositions"
+                    style="-fx-background-color: transparent; -fx-text-fill: #c8e6c9;
+                           -fx-font-size: 13px; -fx-background-radius: 6;
+                           -fx-cursor: hand; -fx-font-family: 'Georgia';
+                           -fx-alignment: CENTER_LEFT; -fx-padding: 0 0 0 14;"/>
+
+            <Button fx:id="btnEvents"
+                    prefHeight="46.0" maxWidth="Infinity"
+                    text="📄   Novedades Admin."
+                    onAction="#onEvents"
+                    style="-fx-background-color: transparent; -fx-text-fill: #c8e6c9;
+                           -fx-font-size: 13px; -fx-background-radius: 6;
+                           -fx-cursor: hand; -fx-font-family: 'Georgia';
+                           -fx-alignment: CENTER_LEFT; -fx-padding: 0 0 0 14;"/>
+        </VBox>
+
+        <!-- Footer nav -->
+        <VBox alignment="CENTER" prefHeight="44.0"
+              style="-fx-background-color: #0f3d1a;">
+            <Label text="Gobernación de Boyacá"
+                   style="-fx-text-fill: #6b9e72; -fx-font-size: 9px;
+                          -fx-font-family: 'Georgia';"/>
+        </VBox>
+    </VBox>
+
+    <!-- ═══════════════════════════════════
+         PANEL DERECHO - Contenido dinámico
+    ═══════════════════════════════════ -->
+    <VBox HBox.hgrow="ALWAYS" spacing="0"
+          style="-fx-background-color: #f0f2f0;">
+
+        <!-- Barra superior con título del módulo -->
+        <HBox alignment="CENTER_LEFT"
+              style="-fx-background-color: white;
+                     -fx-border-color: #e0e8e0;
+                     -fx-border-width: 0 0 1 0;"
+              prefHeight="54.0">
+            <padding><Insets left="24" right="24"/></padding>
+            <Label fx:id="lblModuloTitulo"
+                   text="Inicio — Panel General"
+                   style="-fx-font-size: 16px; -fx-font-weight: bold;
+                          -fx-text-fill: #1a5c28; -fx-font-family: 'Georgia';"/>
+        </HBox>
+
+        <!-- 4 Tarjetas de estadísticas -->
+        <HBox spacing="12" style="-fx-background-color: #f0f2f0;">
+            <padding><Insets top="18" right="20" bottom="10" left="20"/></padding>
+
+            <!-- Tarjeta 1 -->
+            <VBox fx:id="card1" HBox.hgrow="ALWAYS" spacing="4"
+                  style="-fx-background-color: white; -fx-background-radius: 10;
+                         -fx-effect: dropshadow(gaussian,rgba(0,0,0,0.07),8,0,0,2);">
+                <padding><Insets top="14" right="14" bottom="14" left="14"/></padding>
+                <HBox spacing="8" alignment="CENTER_LEFT">
+                    <Label fx:id="icon1" text="👥" style="-fx-font-size: 18px;"/>
+                    <Label fx:id="lblCard1Title" text="Servidores Públicos"
+                           style="-fx-font-size: 10px; -fx-text-fill: #888;
+                                  -fx-font-family: 'Georgia';"/>
+                </HBox>
+                <Label fx:id="lblCard1Value" text="—"
+                       style="-fx-font-size: 28px; -fx-font-weight: bold;
+                              -fx-text-fill: #1a5c28; -fx-font-family: 'Georgia';"/>
+                <Label fx:id="lblCard1Sub" text="servidores activos"
+                       style="-fx-font-size: 9px; -fx-text-fill: #bbb;
+                              -fx-font-family: 'Georgia';"/>
+            </VBox>
+
+            <!-- Tarjeta 2 -->
+            <VBox fx:id="card2" HBox.hgrow="ALWAYS" spacing="4"
+                  style="-fx-background-color: white; -fx-background-radius: 10;
+                         -fx-effect: dropshadow(gaussian,rgba(0,0,0,0.07),8,0,0,2);">
+                <padding><Insets top="14" right="14" bottom="14" left="14"/></padding>
+                <HBox spacing="8" alignment="CENTER_LEFT">
+                    <Label fx:id="icon2" text="🏛️" style="-fx-font-size: 18px;"/>
+                    <Label fx:id="lblCard2Title" text="Dependencias"
+                           style="-fx-font-size: 10px; -fx-text-fill: #888;
+                                  -fx-font-family: 'Georgia';"/>
+                </HBox>
+                <Label fx:id="lblCard2Value" text="—"
+                       style="-fx-font-size: 28px; -fx-font-weight: bold;
+                              -fx-text-fill: #2d7a3a; -fx-font-family: 'Georgia';"/>
+                <Label fx:id="lblCard2Sub" text="dependencias registradas"
+                       style="-fx-font-size: 9px; -fx-text-fill: #bbb;
+                              -fx-font-family: 'Georgia';"/>
+            </VBox>
+
+            <!-- Tarjeta 3 -->
+            <VBox fx:id="card3" HBox.hgrow="ALWAYS" spacing="4"
+                  style="-fx-background-color: white; -fx-background-radius: 10;
+                         -fx-effect: dropshadow(gaussian,rgba(0,0,0,0.07),8,0,0,2);">
+                <padding><Insets top="14" right="14" bottom="14" left="14"/></padding>
+                <HBox spacing="8" alignment="CENTER_LEFT">
+                    <Label fx:id="icon3" text="🏖️" style="-fx-font-size: 18px;"/>
+                    <Label fx:id="lblCard3Title" text="En Vacaciones"
+                           style="-fx-font-size: 10px; -fx-text-fill: #888;
+                                  -fx-font-family: 'Georgia';"/>
+                </HBox>
+                <Label fx:id="lblCard3Value" text="—"
+                       style="-fx-font-size: 28px; -fx-font-weight: bold;
+                              -fx-text-fill: #e67e22; -fx-font-family: 'Georgia';"/>
+                <Label fx:id="lblCard3Sub" text="servidores en vacaciones"
+                       style="-fx-font-size: 9px; -fx-text-fill: #bbb;
+                              -fx-font-family: 'Georgia';"/>
+            </VBox>
+
+            <!-- Tarjeta 4 -->
+            <VBox fx:id="card4" HBox.hgrow="ALWAYS" spacing="4"
+                  style="-fx-background-color: white; -fx-background-radius: 10;
+                         -fx-effect: dropshadow(gaussian,rgba(0,0,0,0.07),8,0,0,2);">
+                <padding><Insets top="14" right="14" bottom="14" left="14"/></padding>
+                <HBox spacing="8" alignment="CENTER_LEFT">
+                    <Label fx:id="icon4" text="📊" style="-fx-font-size: 18px;"/>
+                    <Label fx:id="lblCard4Title" text="Total Registros"
+                           style="-fx-font-size: 10px; -fx-text-fill: #888;
+                                  -fx-font-family: 'Georgia';"/>
+                </HBox>
+                <Label fx:id="lblCard4Value" text="—"
+                       style="-fx-font-size: 28px; -fx-font-weight: bold;
+                              -fx-text-fill: #aa0106; -fx-font-family: 'Georgia';"/>
+                <Label fx:id="lblCard4Sub" text="registros en la base de datos"
+                       style="-fx-font-size: 9px; -fx-text-fill: #bbb;
+                              -fx-font-family: 'Georgia';"/>
+            </VBox>
+        </HBox>
+
+        <!-- Separador -->
+        <Separator style="-fx-background-color: #d8e8d8;">
+            <HBox.margin><Insets left="20" right="20"/></HBox.margin>
+        </Separator>
+
+        <!-- Área de contenido dinámico -->
+        <StackPane fx:id="contentArea" VBox.vgrow="ALWAYS">
+            <padding><Insets top="10" right="20" bottom="16" left="20"/></padding>
+
+            <!-- Panel Home con logo de fondo -->
+            <StackPane fx:id="homePanel">
+
+                <!-- Logo semitransparente de fondo -->
+                <ImageView fitWidth="500" fitHeight="300"
+                           preserveRatio="true"
+                           opacity="0.07"
+                           StackPane.alignment="CENTER">
+                    <image>
+                        <Image url="@/images/logo_boyaca.png"/>
+                    </image>
+                </ImageView>
+
+                <!-- Texto encima del logo -->
+                <VBox alignment="CENTER" spacing="10">
+                    <Label text="¡Bienvenido al Sistema de Gestión!"
+                           style="-fx-font-size: 20px; -fx-font-weight: bold;
+                                  -fx-text-fill: #1a5c28; -fx-font-family: 'Georgia';"/>
+                    <Label text="Seleccione un módulo del panel izquierdo para comenzar."
+                           style="-fx-font-size: 12px; -fx-text-fill: #9aaa9e;
+                                  -fx-font-family: 'Georgia'; -fx-font-style: italic;"/>
+                    <Label text="Gobernación de Boyacá — Sistema de Administración de Personal"
+                           style="-fx-font-size: 10px; -fx-text-fill: #b8c8b8;
+                                  -fx-font-family: 'Georgia';"/>
+                </VBox>
+
+            </StackPane>
+
+        </StackPane>
+
+    </VBox>
+
+</HBox>

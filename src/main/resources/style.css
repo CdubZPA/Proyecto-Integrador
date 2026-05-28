@@ -1,0 +1,315 @@
+/* ══════════════════════════════════
+   FONDO GENERAL
+══════════════════════════════════ */
+.root {
+    -fx-background-color: #f4f6f4;
+    -fx-font-family: "Georgia";
+}
+
+/* ══════════════════════════════════
+   CAMPOS DE TEXTO
+══════════════════════════════════ */
+.text-field {
+    -fx-background-color: #f9fbf9;
+    -fx-border-color: transparent transparent #c8d8c8 transparent;
+    -fx-border-width: 0 0 2 0;
+    -fx-background-radius: 4;
+    -fx-border-radius: 0;
+    -fx-padding: 8 10 8 10;
+    -fx-font-size: 13px;
+    -fx-font-family: "Georgia";
+    -fx-prompt-text-fill: #b0b8b0;
+}
+
+.text-field:focused {
+    -fx-border-color: transparent transparent #1a5c28 transparent;
+    -fx-background-color: #f0f7f0;
+}
+
+/* ══════════════════════════════════
+   COMBOBOX
+══════════════════════════════════ */
+.combo-box {
+    -fx-background-color: #f9fbf9;
+    -fx-border-color: transparent transparent #c8d8c8 transparent;
+    -fx-border-width: 0 0 2 0;
+    -fx-background-radius: 4;
+    -fx-font-size: 13px;
+    -fx-font-family: "Georgia";
+}
+
+.combo-box:focused {
+    -fx-border-color: transparent transparent #1a5c28 transparent;
+}
+
+.combo-box .list-cell {
+    -fx-font-family: "Georgia";
+    -fx-font-size: 13px;
+    -fx-padding: 6 10 6 10;
+}
+
+.combo-box-popup .list-view {
+    -fx-background-color: white;
+    -fx-border-color: #c8d8c8;
+    -fx-border-radius: 4;
+}
+
+.combo-box-popup .list-view .list-cell:hover {
+    -fx-background-color: #e8f5e8;
+}
+
+.combo-box-popup .list-view .list-cell:selected {
+    -fx-background-color: #1a5c28;
+    -fx-text-fill: white;
+}
+
+/* ══════════════════════════════════
+   DATEPICKER
+══════════════════════════════════ */
+.date-picker .text-field {
+    -fx-background-color: #f9fbf9;
+    -fx-border-color: transparent transparent #c8d8c8 transparent;
+    -fx-border-width: 0 0 2 0;
+    -fx-font-size: 13px;
+    -fx-font-family: "Georgia";
+}
+
+.date-picker:focused .text-field {
+    -fx-border-color: transparent transparent #1a5c28 transparent;
+    -fx-background-color: #f0f7f0;
+}
+
+.date-picker-popup {
+    -fx-background-color: white;
+    -fx-border-color: #c8d8c8;
+    -fx-border-radius: 6;
+}
+
+.date-picker-popup .month-year-pane {
+    -fx-background-color: #1a5c28;
+}
+
+.date-picker-popup .spinner .button {
+    -fx-background-color: transparent;
+    -fx-text-fill: white;
+}
+
+.date-picker-popup .day-cell:hover {
+    -fx-background-color: #e8f5e8;
+    -fx-border-color: #1a5c28;
+}
+
+.date-picker-popup .selected {
+    -fx-background-color: #1a5c28;
+    -fx-text-fill: white;
+}
+
+/* ══════════════════════════════════
+   TEXTAREA
+══════════════════════════════════ */
+.text-area {
+    -fx-background-color: #f9fbf9;
+    -fx-border-color: #c8d8c8;
+    -fx-border-width: 1;
+    -fx-border-radius: 6;
+    -fx-background-radius: 6;
+    -fx-font-size: 13px;
+    -fx-font-family: "Georgia";
+    -fx-prompt-text-fill: #b0b8b0;
+}
+
+.text-area:focused {
+    -fx-border-color: #1a5c28;
+    -fx-background-color: #f0f7f0;
+}
+
+.text-area .content {
+    -fx-background-color: transparent;
+    -fx-background-radius: 6;
+}
+
+/* ══════════════════════════════════
+   LABELS GENERALES
+══════════════════════════════════ */
+.label {
+    -fx-font-family: "Georgia";
+    -fx-font-size: 12px;
+    -fx-text-fill: #3a3a3a;
+}
+
+/* Label al lado de campos */
+.form-label {
+    -fx-font-family: "Georgia Bold";
+    -fx-font-size: 12px;
+    -fx-text-fill: #4a6b50;
+}
+
+/* Título de sección (Datos del Servidor, Registros) */
+.section-title {
+    -fx-font-family: "Georgia Bold";
+    -fx-font-size: 14px;
+    -fx-text-fill: #1a5c28;
+}
+
+/* Texto pequeño del encabezado verde */
+.header-subtitle {
+    -fx-font-family: "Georgia";
+    -fx-font-size: 11px;
+    -fx-text-fill: #a8d5b0;
+}
+
+/* Texto grande del encabezado verde */
+.header-title {
+    -fx-font-family: "Georgia Bold";
+    -fx-font-size: 24px;
+    -fx-text-fill: white;
+}
+
+/* ══════════════════════════════════
+   TABLA
+══════════════════════════════════ */
+.table-view {
+    -fx-background-color: white;
+    -fx-border-color: #d0ddd0;
+    -fx-border-radius: 6;
+    -fx-background-radius: 6;
+    -fx-font-family: "Georgia";
+}
+
+.table-view .column-header-background {
+    -fx-background-color: #1a5c28;
+    -fx-background-radius: 6 6 0 0;
+}
+
+.table-view .column-header {
+    -fx-background-color: transparent;
+    -fx-border-color: transparent;
+    -fx-size: 38px;
+}
+
+.table-view .column-header .label {
+    -fx-text-fill: white;
+    -fx-font-family: "Georgia Bold";
+    -fx-font-size: 12px;
+    -fx-alignment: CENTER-LEFT;
+    -fx-padding: 0 0 0 8;
+}
+
+.table-row-cell {
+    -fx-cell-size: 36px;
+    -fx-font-family: "Georgia";
+    -fx-font-size: 12px;
+}
+
+.table-row-cell:odd {
+    -fx-background-color: #f4f8f4;
+}
+
+.table-row-cell:even {
+    -fx-background-color: white;
+}
+
+.table-row-cell:hover {
+    -fx-background-color: #e8f5e8;
+}
+
+.table-row-cell:selected {
+    -fx-background-color: #c8e6c8;
+}
+
+.table-row-cell:selected .text {
+    -fx-fill: #1a3a20;
+}
+
+.table-view .placeholder .label {
+    -fx-text-fill: #aaaaaa;
+    -fx-font-family: "Georgia";
+    -fx-font-size: 13px;
+}
+
+/* ══════════════════════════════════
+   BOTONES
+══════════════════════════════════ */
+.btn-save {
+    -fx-background-color: #1a5c28;
+    -fx-text-fill: white;
+    -fx-font-size: 13px;
+    -fx-background-radius: 5;
+    -fx-cursor: hand;
+    -fx-font-family: "Georgia";
+}
+
+.btn-save:hover {
+    -fx-background-color: #2d7a3a;
+    -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.15), 6, 0, 0, 2);
+}
+
+.btn-save:pressed {
+    -fx-background-color: #134520;
+}
+
+.btn-delete {
+    -fx-background-color: #b01010;
+    -fx-text-fill: white;
+    -fx-font-size: 13px;
+    -fx-background-radius: 5;
+    -fx-cursor: hand;
+    -fx-font-family: "Georgia";
+}
+
+.btn-delete:hover {
+    -fx-background-color: #cc1a1a;
+    -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.15), 6, 0, 0, 2);
+}
+
+.btn-delete:pressed {
+    -fx-background-color: #8a0c0c;
+}
+
+/* Botones del menú principal */
+.btn-menu {
+    -fx-background-radius: 6;
+    -fx-cursor: hand;
+    -fx-font-family: "Georgia";
+    -fx-font-size: 15px;
+    -fx-text-fill: white;
+    -fx-alignment: CENTER-LEFT;
+    -fx-padding: 0 0 0 20;
+}
+
+.btn-menu:hover {
+    -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.2), 8, 0, 0, 3);
+    -fx-translate-y: -1;
+}
+
+.btn-menu:pressed {
+    -fx-translate-y: 1;
+    -fx-effect: none;
+}
+
+/* ══════════════════════════════════
+   SCROLLBAR
+══════════════════════════════════ */
+.scroll-bar {
+    -fx-background-color: #f0f0f0;
+}
+
+.scroll-bar .thumb {
+    -fx-background-color: #c8d8c8;
+    -fx-background-radius: 4;
+}
+
+.scroll-bar .thumb:hover {
+    -fx-background-color: #1a5c28;
+}
+
+.scroll-bar .track {
+    -fx-background-color: #f0f0f0;
+    -fx-border-color: transparent;
+}
+
+.scroll-bar .increment-button,
+.scroll-bar .decrement-button {
+    -fx-background-color: transparent;
+    -fx-padding: 2;
+}
