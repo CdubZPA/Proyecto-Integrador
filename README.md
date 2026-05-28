@@ -113,9 +113,3 @@ src/main/resources/
 ### **Novedades Administrativas**
 <img width="1600" height="827" alt="image" src="https://github.com/user-attachments/assets/c1d958a5-7a40-44ff-891c-5569b852fd2c" />
 <img width="1600" height="825" alt="image" src="https://github.com/user-attachments/assets/a4ba8ba2-b7b3-401c-ba35-63aa61ab010f" />
-
-## **Autor**
-Proyecto desarrollado por **Camilo Sierra**.
-
-## **Licencia**
-Puedes agregar una licencia como **MIT** o la que prefieras.
